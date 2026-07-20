@@ -532,7 +532,7 @@ function CarCard({ car, index }) {
           <button
             onClick={(e) => {
               e.preventDefault();
-              toggleFavorite(car.id);
+              toggleFavorite(car);
             }}
             style={{
               position: 'absolute',
