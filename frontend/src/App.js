@@ -108,7 +108,7 @@ function SplashScreen({ onDone }) {
           color: 'rgba(201,168,76,0.6)',
           marginBottom: 48,
         }}>
-          MOTORS · EST. 2024
+          MOTORS · EST. 2026
         </div>
 
         {/* Loading bar */}

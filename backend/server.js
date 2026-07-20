@@ -28,7 +28,7 @@ app.post("/api/chat", async (req, res) => {
     const { messages, system } = req.body;
 
     const groqMessages = [
-      { role: "system", content: system },
+      { role: "system", content: system || "You are a helpful assistant." },
       ...messages.map(m => ({
         role: m.role === "assistant" ? "assistant" : "user",
         content: m.content
@@ -42,7 +42,7 @@ app.post("/api/chat", async (req, res) => {
         "Authorization": `Bearer ${process.env.GROQ_API_KEY}`
       },
       body: JSON.stringify({
-        model: "llama-3.3-70b-versatile",
+        model: "openai/gpt-oss-120b",
         messages: groqMessages,
         max_tokens: 1000
       })
@@ -50,9 +50,17 @@ app.post("/api/chat", async (req, res) => {
 
     const data = await response.json();
 
+    if (!response.ok) {
+      console.error("Groq API error:", response.status, JSON.stringify(data));
+      return res.status(500).json({
+        error: { message: data.error?.message || `Groq request failed with status ${response.status}` }
+      });
+    }
+
     const text = data.choices?.[0]?.message?.content;
 
     if (!text) {
+      console.error("Groq returned no content. Full response:", JSON.stringify(data));
       return res.status(500).json({
         error: { message: "Groq returned no response" }
       });

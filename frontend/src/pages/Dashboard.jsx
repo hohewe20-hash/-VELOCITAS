@@ -134,7 +134,7 @@ function Hero({ onExplore }) {
               gap: '12px',
             }}>
               <span style={{ width: '32px', height: '1px', background: '#c9a84c', display: 'inline-block' }} />
-              VELOCITAS MOTORS — EST. 2024
+              VELOCITAS MOTORS — EST. 2026
             </p>
           </div>
 
@@ -532,7 +532,7 @@ function CarCard({ car, index }) {
           <button
             onClick={(e) => {
               e.preventDefault();
-              toggleFavorite(car.id);
+              toggleFavorite(car);
             }}
             style={{
               position: 'absolute',

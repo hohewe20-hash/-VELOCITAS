@@ -427,7 +427,7 @@ export default function CarDetails() {
                 </button>
 
                 <button
-                  onClick={() => toggleFavorite(car.id)}
+                  onClick={() => toggleFavorite(car)}
                   style={{
                     width: '100%',
                     padding: '14px',
