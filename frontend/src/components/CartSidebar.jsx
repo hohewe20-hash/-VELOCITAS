@@ -103,28 +103,6 @@ export default function CartSidebar() {
             flexShrink: 0,
           }}>
 
-            {[].map(() => {})}
-
-            {[].length > 0 && null}
-
-            {[].map(() => {})}
-
-            {[].map(() => {})}
-
-            {[].map(() => {})}
-
-            {[].map(() => {})}
-
-            {[].map(() => {})}
-
-            {[].map(() => {})}
-
-            {[].map(() => {})}
-
-            {[].map(() => {})}
-
-            {[].map(() => {})}
-
             {/* Summary lines */}
             {[
               { label: 'Subtotal', value: fmt(cartTotal) },
@@ -150,7 +128,6 @@ export default function CartSidebar() {
               }}>{fmt(grandTotal)}</span>
             </div>
 
-            {/* ✅ ONLY CHANGE IS HERE */}
             <button
               onClick={() => {
                 setCartOpen(false);

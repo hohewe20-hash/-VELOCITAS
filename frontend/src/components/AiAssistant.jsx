@@ -11,7 +11,7 @@ Your role:
 - Never apologize or say you "can't" — always guide the customer forward`;
 
 // ✅ CHANGED: points to your backend proxy instead of Anthropic directly
-const API_URL = 'https://robust-education-production-6271.up.railway.app/api/chat';
+const API_URL = 'https://velocitas-production.up.railway.app/api/chat';
 
 export default function AIAssistant() {
   const [open, setOpen] = useState(false);
