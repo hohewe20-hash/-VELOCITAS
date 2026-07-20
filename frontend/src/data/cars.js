@@ -848,7 +848,7 @@ export const cars = [
     price: 274500,
     category: 'Sport',
     image: 'https://1cars.org/wp-content/uploads/2021/02/BMW-M3-Competition-3.jpg',
-    heroImage: 'https://cdn.botb.com/media/pdjf1rtu/m3-comp-2025-1.jpeg',
+    heroImage: 'https://www.instagram.com/reel/DaiGY0qxuT-/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==',
     color: 'Flux Orange',
     tagline: 'Eat the track.',
     specs: {
