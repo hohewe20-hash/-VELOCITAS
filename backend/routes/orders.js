@@ -1,0 +1,68 @@
+const express = require("express");
+const router = express.Router();
+const Order = require("../models/Order");
+
+// 🟢 CREATE ORDER (Checkout)
+router.post("/checkout", async (req, res) => {
+  try {
+    const { items, total } = req.body;
+
+    // validation
+    if (!items || !Array.isArray(items) || items.length === 0) {
+      return res.status(400).json({
+        success: false,
+        message: "Cart is empty or invalid"
+      });
+    }
+
+    if (!total && total !== 0) {
+      return res.status(400).json({
+        success: false,
+        message: "Total is required"
+      });
+    }
+
+    const order = await Order.create({
+      items,
+      total
+    });
+
+    return res.status(201).json({
+      success: true,
+      message: "Order created successfully",
+      order
+    });
+
+  } catch (error) {
+    console.error("Checkout Error:", error);
+
+    return res.status(500).json({
+      success: false,
+      message: "Internal server error"
+    });
+  }
+});
+
+
+// 🟢 GET ALL ORDERS
+router.get("/", async (req, res) => {
+  try {
+    const orders = await Order.find().sort({ createdAt: -1 });
+
+    return res.status(200).json({
+      success: true,
+      count: orders.length,
+      orders
+    });
+
+  } catch (error) {
+    console.error("Get Orders Error:", error);
+
+    return res.status(500).json({
+      success: false,
+      message: "Internal server error"
+    });
+  }
+});
+
+module.exports = router;
