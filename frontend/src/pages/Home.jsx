@@ -102,7 +102,7 @@ export default function Home() {
                 marginBottom: 24, display: 'flex', alignItems: 'center', gap: 12,
               }}>
                 <span style={{ width: 32, height: 1, background: 'var(--gold)', display: 'inline-block' }}/>
-                VELOCITAS MOTORS · EST. 2024
+                VELOCITAS MOTORS · EST. 2026
               </p>
 
               <h1 style={{
