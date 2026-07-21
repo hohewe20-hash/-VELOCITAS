@@ -102,7 +102,7 @@ export default function Home() {
                 marginBottom: 24, display: 'flex', alignItems: 'center', gap: 12,
               }}>
                 <span style={{ width: 32, height: 1, background: 'var(--gold)', display: 'inline-block' }}/>
-                VELOCITAS MOTORS · EST. 2024
+                1M MOTORS · EST. 2026
               </p>
 
               <h1 style={{
@@ -554,7 +554,7 @@ function Footer() {
         </div>
         <div className="divider" style={{ marginBottom: 24 }}/>
         <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 16 }}>
-          <p style={{ fontSize: 12, color: 'var(--white-20)' }}>© 2024 Velocitas Motors. All rights reserved.</p>
+          <p style={{ fontSize: 12, color: 'var(--white-20)' }}>© 2026 1M Motors. All rights reserved.</p>
           <p style={{ fontFamily: 'var(--font-ui)', fontSize: 10, letterSpacing: '2.5px', color: 'var(--white-20)' }}>LUXURY · PERFORMANCE · EXCELLENCE</p>
         </div>
       </div>

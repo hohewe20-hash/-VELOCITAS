@@ -134,7 +134,7 @@ function Hero({ onExplore }) {
               gap: '12px',
             }}>
               <span style={{ width: '32px', height: '1px', background: '#c9a84c', display: 'inline-block' }} />
-              VELOCITAS MOTORS — EST. 2024
+              1M MOTORS — EST. 2024
             </p>
           </div>
 
@@ -791,7 +791,7 @@ function Footer() {
               backgroundClip: 'text',
             }}>TAS</span></p>
             <p style={{ fontSize: '12px', color: 'rgba(240,237,232,0.3)' }}>
-              © 2024 Velocitas Motors. All rights reserved.
+              © 2026 1M Motors. All rights reserved.
             </p>
           </div>
           <p style={{
