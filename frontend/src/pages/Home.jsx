@@ -148,10 +148,6 @@ export default function Home() {
               display: 'flex', gap: 40,
               opacity: loaded ? 1 : 0, transition: 'opacity 1s 1s',
             }}>
-              {[
-                { v: heroCar?.specs.horsepowerStr || '520', l: 'Power' },
-                { v: heroCar?.specs.accelStr || '2.3', l: '0–60 mph' },
-                { v: heroCar?.specs.topSpeedStr || '311', l: 'Top Speed' },
               ].map(({ v, l }) => (
                 <div key={l}>
                   <div key={`${slide}-${l}`} style={{
