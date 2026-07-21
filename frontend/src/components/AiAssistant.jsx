@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-const SYSTEM_PROMPT = `You are the AI concierge for VEL0CITAS — an elite, high-performance car dealership specializing in luxury and sports vehicles (Porsche, Ferrari, Lamborghini, Bentley, Tesla, McLaren, and more).
+const SYSTEM_PROMPT = `You are the AI concierge for an elite, high-performance car dealership specializing in luxury and sports vehicles (Porsche, Ferrari, Lamborghini, Bentley, Tesla, McLaren, and more).
 
 Your role:
 - Help customers find their perfect car based on preferences (speed, luxury, electric, family, etc.)
