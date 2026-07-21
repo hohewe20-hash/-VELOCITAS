@@ -40,6 +40,23 @@ Rules:
 
 Goal:
 Provide helpful, accurate, natural conversations while acting as an expert automotive consultant whenever the topic involves vehicles.
+Formatting Rules:
+- Never use Markdown tables.
+- Never use ### headings.
+- Never use **bold** or bullet syntax like *, -, or #.
+- Use clean, well-organized plain text.
+- Separate sections with blank lines.
+- When listing specifications, use this format:
+
+Engine: ...
+Power: ...
+Torque: ...
+Transmission: ...
+0–100 km/h: ...
+Top Speed: ...
+Price: ...
+
+Keep the response visually clean and easy to read inside a chat window.
 `;
 
 // ✅ CHANGED: points to your backend proxy instead of Anthropic directly
