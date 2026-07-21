@@ -56,53 +56,76 @@ export default function CarDetails() {
   return (
     <div style={{ background: 'var(--black)', minHeight: '100vh', paddingTop: '72px' }}>
 
-      {/* Hero */}
-      <section style={{
-        position: 'relative',
-        height: 'clamp(400px, 55vh, 680px)',
-        overflow: 'hidden',
-      }}>
-        {car.heroVideo ? (
-  <ReactPlayer
-    url={car.heroVideo}
-    playing
-    muted
-    loop
-    width="100%"
-    height="100%"
-    style={{
-      position: 'absolute',
-      inset: 0,
-      transform: 'scale(1.05)',
-    }}
-    config={{
-      youtube: {
-        playerVars: {
-          controls: 0,
-          modestbranding: 1,
-          autoplay: 1,
-          mute: 1,
-        },
-      },
-    }}
-  />
-) : (
-  <img
-    src={car.heroImage || car.image}
-    alt={car.name}
-    style={{
-      position: 'absolute',
-      inset: 0,
-      width: '100%',
-      height: '100%',
-      objectFit: 'cover',
-      objectPosition: 'center 40%',
-      opacity: loaded ? 1 : 0,
-      transform: loaded ? 'scale(1)' : 'scale(1.04)',
-      transition: 'opacity 1s, transform 1.2s cubic-bezier(0.22,1,0.36,1)',
-    }}
-  />
-)}
+{/* Hero */}
+<section style={{
+  position: 'relative',
+  height: 'clamp(400px, 55vh, 680px)',
+  overflow: 'hidden',
+}}>
+  {car.heroVideo ? (
+    <ReactPlayer
+      url={car.heroVideo}
+      playing={true}
+      muted={true}
+      loop={true}
+      controls={false}
+      width="100%"
+      height="100%"
+      style={{
+        position: 'absolute',
+        inset: 0,
+        pointerEvents: 'none',
+      }}
+    />
+  ) : (
+    <img
+      src={car.heroImage || car.image}
+      alt={car.name}
+      style={{
+        position: 'absolute',
+        inset: 0,
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+        objectPosition: 'center 40%',
+        opacity: loaded ? 1 : 0,
+        transform: loaded ? 'scale(1)' : 'scale(1.04)',
+        transition: 'opacity 1s, transform 1.2s cubic-bezier(0.22,1,0.36,1)',
+      }}
+    />
+  
+  {car.heroVideo ? (
+    <ReactPlayer
+      url={car.heroVideo}
+      playing={true}
+      muted={true}
+      loop={true}
+      controls={false}
+      width="100%"
+      height="100%"
+      style={{
+        position: 'absolute',
+        inset: 0,
+        pointerEvents: 'none',
+      }}
+    />
+  ) : (
+    <img
+      src={car.heroImage || car.image}
+      alt={car.name}
+      style={{
+        position: 'absolute',
+        inset: 0,
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+        objectPosition: 'center 40%',
+        opacity: loaded ? 1 : 0,
+        transform: loaded ? 'scale(1)' : 'scale(1.04)',
+        transition: 'opacity 1s, transform 1.2s cubic-bezier(0.22,1,0.36,1)',
+      }}
+    />
+  )}
         <div style={{
           position: 'absolute',
           inset: 0,
