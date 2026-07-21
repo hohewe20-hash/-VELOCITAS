@@ -62,39 +62,7 @@ export default function CarDetails() {
   height: 'clamp(400px, 55vh, 680px)',
   overflow: 'hidden',
 }}>
-  {car.heroVideo ? (
-    <ReactPlayer
-      url={car.heroVideo}
-      playing={true}
-      muted={true}
-      loop={true}
-      controls={false}
-      width="100%"
-      height="100%"
-      style={{
-        position: 'absolute',
-        inset: 0,
-        pointerEvents: 'none',
-      }}
-    />
-  ) : (
-    <img
-      src={car.heroImage || car.image}
-      alt={car.name}
-      style={{
-        position: 'absolute',
-        inset: 0,
-        width: '100%',
-        height: '100%',
-        objectFit: 'cover',
-        objectPosition: 'center 40%',
-        opacity: loaded ? 1 : 0,
-        transform: loaded ? 'scale(1)' : 'scale(1.04)',
-        transition: 'opacity 1s, transform 1.2s cubic-bezier(0.22,1,0.36,1)',
-      }}
-    />
-  
-  {car.heroVideo ? (
+    {car.heroVideo ? (
     <ReactPlayer
       url={car.heroVideo}
       playing={true}
