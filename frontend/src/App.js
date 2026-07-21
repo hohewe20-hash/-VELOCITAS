@@ -8,10 +8,6 @@ import Toast from './components/Toast';
 import CustomCursor from './components/CustomCursor';
 import AIAssistant from './components/AiAssistant';
 
-import Contact from './pages/Contact';
-   // وجوه <Routes>:
-   <Route path="/contact" element={<Contact />} />
-
 import Home from './pages/Home';
 import Cars from './pages/Cars';
 import CarDetails from './pages/CarDetails';
