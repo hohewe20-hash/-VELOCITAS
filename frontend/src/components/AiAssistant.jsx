@@ -20,7 +20,7 @@ export default function AIAssistant() {
   const [messages, setMessages] = useState([
     {
       role: 'ai',
-      text: 'Welcome to Velocitas Intelligence System. Ask me about performance, luxury, specs or recommendations.'
+      text: 'اهلا اساعد حضرتك ازاي ؟'
     }
   ]);
 
