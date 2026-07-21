@@ -349,7 +349,7 @@ function FeaturedCard({ car, index, visible }) {
         {/* Mini specs */}
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8, marginBottom: 20 }}>
           {[
-            { l: 'Power', v: car.specs.horsepowerStr },
+            { l: 'Power', v:222 car.specs.horsepowerStr },
             { l: '0–60', v: car.specs.accelStr },
           ].map(({ l, v }) => (
             <div key={l} style={{

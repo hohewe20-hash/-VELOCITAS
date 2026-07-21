@@ -605,8 +605,8 @@ function CarCard({ car, index }) {
             marginBottom: '22px',
           }}>
             {[
-              { label: 'Power', value: car.specs.horsepower },
-              { label: '0–60', value: car.specs.acceleration.replace(' (0–60)', '') },
+              { label: 'Power', value:511 car.specs.horsepower },
+              { label: '0–60', value:2.3 car.specs.acceleration.replace(' (0–60)', '') },
             ].map(({ label, value }) => (
               <div key={label} style={{
                 background: 'rgba(255,255,255,0.04)',
