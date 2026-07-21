@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { cars } from '../data/cars';
 import { useApp } from '../context/AppContext';
+import ReactPlayer from 'react-player';
 
 const fmt = (n) =>
   new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(n);
@@ -61,21 +62,47 @@ export default function CarDetails() {
         height: 'clamp(400px, 55vh, 680px)',
         overflow: 'hidden',
       }}>
-        <img
-          src={car.heroImage || car.image}
-          alt={car.name}
-          style={{
-            position: 'absolute',
-            inset: 0,
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            objectPosition: 'center 40%',
-            opacity: loaded ? 1 : 0,
-            transform: loaded ? 'scale(1)' : 'scale(1.04)',
-            transition: 'opacity 1s, transform 1.2s cubic-bezier(0.22,1,0.36,1)',
-          }}
-        />
+        {car.heroVideo ? (
+  <ReactPlayer
+    url={car.heroVideo}
+    playing
+    muted
+    loop
+    width="100%"
+    height="100%"
+    style={{
+      position: 'absolute',
+      inset: 0,
+      transform: 'scale(1.05)',
+    }}
+    config={{
+      youtube: {
+        playerVars: {
+          controls: 0,
+          modestbranding: 1,
+          autoplay: 1,
+          mute: 1,
+        },
+      },
+    }}
+  />
+) : (
+  <img
+    src={car.heroImage || car.image}
+    alt={car.name}
+    style={{
+      position: 'absolute',
+      inset: 0,
+      width: '100%',
+      height: '100%',
+      objectFit: 'cover',
+      objectPosition: 'center 40%',
+      opacity: loaded ? 1 : 0,
+      transform: loaded ? 'scale(1)' : 'scale(1.04)',
+      transition: 'opacity 1s, transform 1.2s cubic-bezier(0.22,1,0.36,1)',
+    }}
+  />
+)}
         <div style={{
           position: 'absolute',
           inset: 0,
