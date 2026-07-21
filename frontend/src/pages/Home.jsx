@@ -102,7 +102,7 @@ export default function Home() {
                 marginBottom: 24, display: 'flex', alignItems: 'center', gap: 12,
               }}>
                 <span style={{ width: 32, height: 1, background: 'var(--gold)', display: 'inline-block' }}/>
-                VELOCITAS MOTORS · EST. 2026
+                VELOCITAS MOTORS · EST. 2024
               </p>
 
               <h1 style={{
@@ -349,7 +349,7 @@ function FeaturedCard({ car, index, visible }) {
         {/* Mini specs */}
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8, marginBottom: 20 }}>
           {[
-            { l: 'Power', v:222 car.specs.horsepowerStr },
+            { l: 'Power', v: car.specs.horsepowerStr },
             { l: '0–60', v: car.specs.accelStr },
           ].map(({ l, v }) => (
             <div key={l} style={{

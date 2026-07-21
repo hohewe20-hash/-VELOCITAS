@@ -134,7 +134,7 @@ function Hero({ onExplore }) {
               gap: '12px',
             }}>
               <span style={{ width: '32px', height: '1px', background: '#c9a84c', display: 'inline-block' }} />
-              VELOCITAS MOTORS — EST. 2026
+              VELOCITAS MOTORS — EST. 2024
             </p>
           </div>
 
@@ -532,7 +532,7 @@ function CarCard({ car, index }) {
           <button
             onClick={(e) => {
               e.preventDefault();
-              toggleFavorite(car);
+              toggleFavorite(car.id);
             }}
             style={{
               position: 'absolute',
@@ -605,8 +605,8 @@ function CarCard({ car, index }) {
             marginBottom: '22px',
           }}>
             {[
-              { label: 'Power', value:511 car.specs.horsepower },
-              { label: '0–60', value:2.3 car.specs.acceleration.replace(' (0–60)', '') },
+              { label: 'Power', value: car.specs.horsepower },
+              { label: '0–60', value: car.specs.acceleration.replace(' (0–60)', '') },
             ].map(({ label, value }) => (
               <div key={label} style={{
                 background: 'rgba(255,255,255,0.04)',
